@@ -1,0 +1,1213 @@
+<http://omicso#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://omicso#> <http://purl.org/dc/elements/1.1/created> "2024-01-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://omicso#> <http://purl.org/dc/elements/1.1/creator> "Lucia Muñoz Gil" .
+<http://omicso#> <http://purl.org/dc/elements/1.1/creator> "Miguel La Iglesia Mirones" .
+<http://omicso#> <http://purl.org/dc/elements/1.1/description> "An ontology for omics data query and annotation"@en .
+<http://omicso#> <http://purl.org/dc/elements/1.1/license> <https://creativecommons.org/licenses/by/4.0/> .
+<http://omicso#> <http://purl.org/dc/elements/1.1/title> "Omics Data Ontology (omicso)" .
+<http://omicso#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/license
+<http://purl.org/dc/elements/1.1/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://omicso#belongsTo
+<http://omicso#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.obolibrary.org/obo/PO_0009011> .
+<http://omicso#belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C14250> .
+<http://omicso#belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to" .
+# 
+# http://omicso#hasAnalyteProtein
+<http://omicso#hasAnalyteProtein> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasAnalyteProtein> <http://www.w3.org/2002/07/owl#inverseOf> <http://omicso#isAnalyteProteinOf> .
+<http://omicso#hasAnalyteProtein> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#Proteomics> .
+<http://omicso#hasAnalyteProtein> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17021> .
+<http://omicso#hasAnalyteProtein> <http://www.w3.org/2000/01/rdf-schema#label> "has analyte protein" .
+# 
+# http://omicso#hasAnalyteTranscript
+<http://omicso#hasAnalyteTranscript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasAnalyteTranscript> <http://www.w3.org/2002/07/owl#inverseOf> <http://omicso#isAnalyteTranscriptOf> .
+<http://omicso#hasAnalyteTranscript> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#Transcriptomics> .
+<http://omicso#hasAnalyteTranscript> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C813> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26549> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#hasAnalyteTranscript> <http://www.w3.org/2000/01/rdf-schema#label> "has analyte transcript" .
+# 
+# http://omicso#hasAssay
+<http://omicso#hasAssay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasAssay> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#omicsPaper> .
+<http://omicso#hasAssay> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#OmicsAssay> .
+<http://omicso#hasAssay> <http://www.w3.org/2000/01/rdf-schema#label> "has assay" .
+# 
+# http://omicso#hasBaselineExpressionLevel
+<http://omicso#hasBaselineExpressionLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasBaselineExpressionLevel> <http://www.w3.org/2002/07/owl#inverseOf> <http://omicso#isBaselineExpressionLevelOf> .
+<http://omicso#hasBaselineExpressionLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#BaselineExpressionStudy> .
+<http://omicso#hasBaselineExpressionLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/ns#BaselineExpressionLevel> .
+<http://omicso#hasBaselineExpressionLevel> <http://www.w3.org/2000/01/rdf-schema#label> "has baseline expression level" .
+# 
+# http://omicso#hasDoi
+<http://omicso#hasDoi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasDoi> <http://www.w3.org/2002/07/owl#inverseOf> <http://omicso#isDoiOf> .
+<http://omicso#hasDoi> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#omicsPaper> .
+<http://omicso#hasDoi> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C71462> .
+<http://omicso#hasDoi> <http://www.w3.org/2000/01/rdf-schema#label> "has doi" .
+# 
+# http://omicso#hasExperimentalConditions
+<http://omicso#hasExperimentalConditions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasExperimentalConditions> <http://www.w3.org/2002/07/owl#inverseOf> <http://omicso#isExperimentalConditionsOf> .
+<http://omicso#hasExperimentalConditions> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#OmicsAssay> .
+<http://omicso#hasExperimentalConditions> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#ExperimentalConditions> .
+<http://omicso#hasExperimentalConditions> <http://www.w3.org/2000/01/rdf-schema#label> "has experimental conditions" .
+# 
+# http://omicso#hasExperimentalVariable
+<http://omicso#hasExperimentalVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasExperimentalVariable> <http://www.w3.org/2002/07/owl#inverseOf> <http://omicso#isVariableOf> .
+<http://omicso#hasExperimentalVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#ExperimentalConditions> .
+<http://omicso#hasExperimentalVariable> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ebi.ac.uk/efo/EFO_0000510> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.obolibrary.org/obo/PSO_0000001> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#hasExperimentalVariable> <http://www.w3.org/2000/01/rdf-schema#label> "has experimental variable" .
+# 
+# http://omicso#hasExpression
+<http://omicso#hasExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasExpression> <http://www.w3.org/2002/07/owl#inverseOf> <http://omicso#isExpressionOf> .
+<http://omicso#hasExpression> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> .
+<http://omicso#hasExpression> <http://www.w3.org/2000/01/rdf-schema#range> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.owl-ontologies.com/ns#BaselineExpressionLevel> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://omicso#DifferentialExpressionChange> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#hasExpression> <http://www.w3.org/2000/01/rdf-schema#label> "has expression" .
+# 
+# http://omicso#hasExpressionChange
+<http://omicso#hasExpressionChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasExpressionChange> <http://www.w3.org/2002/07/owl#inverseOf> <http://omicso#isExpressionChangeOf> .
+<http://omicso#hasExpressionChange> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#DifferentialExpressionStudy> .
+<http://omicso#hasExpressionChange> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#DifferentialExpressionChange> .
+<http://omicso#hasExpressionChange> <http://www.w3.org/2000/01/rdf-schema#label> "has expression change" .
+# 
+# http://omicso#hasExpressionResult
+<http://omicso#hasExpressionResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasExpressionResult> <http://www.w3.org/2002/07/owl#inverseOf> <http://omicso#isExpressionResultOf> .
+<http://omicso#hasExpressionResult> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#ExpressionStudy> .
+<http://omicso#hasExpressionResult> <http://www.w3.org/2000/01/rdf-schema#range> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.owl-ontologies.com/ns#BaselineExpressionLevel> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://omicso#DifferentialExpressionChange> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#hasExpressionResult> <http://www.w3.org/2000/01/rdf-schema#label> "has expression result" .
+# 
+# http://omicso#hasExpressionStudy
+<http://omicso#hasExpressionStudy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasExpressionStudy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#OmicsAssay> .
+<http://omicso#hasExpressionStudy> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#ExpressionStudy> .
+<http://omicso#hasExpressionStudy> <http://www.w3.org/2000/01/rdf-schema#label> "has expression study" .
+# 
+# http://omicso#hasFileID
+<http://omicso#hasFileID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasFileID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#OmicsFile> .
+<http://omicso#hasFileID> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#FileID> .
+<http://omicso#hasFileID> <http://www.w3.org/2000/01/rdf-schema#label> "has file id" .
+# 
+# http://omicso#hasGeneID
+<http://omicso#hasGeneID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasGeneID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#MoleculeID> .
+<http://omicso#hasGeneID> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43568> .
+<http://omicso#hasGeneID> <http://www.w3.org/2000/01/rdf-schema#label> "has gene id" .
+# 
+# http://omicso#hasGeneName
+<http://omicso#hasGeneName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasGeneName> <http://www.w3.org/2002/07/owl#inverseOf> <http://omicso#isGeneNameOf> .
+<http://omicso#hasGeneName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612> .
+<http://omicso#hasGeneName> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#GeneName> .
+<http://omicso#hasGeneName> <http://www.w3.org/2000/01/rdf-schema#label> "has gene name" .
+# 
+# http://omicso#hasGeneSymbol
+<http://omicso#hasGeneSymbol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasGeneSymbol> <http://www.w3.org/2002/07/owl#inverseOf> <http://omicso#isGeneSymbolOf> .
+<http://omicso#hasGeneSymbol> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612> .
+<http://omicso#hasGeneSymbol> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43568> .
+<http://omicso#hasGeneSymbol> <http://www.w3.org/2000/01/rdf-schema#label> "has gene symbol" .
+# 
+# http://omicso#hasOmicsFile
+<http://omicso#hasOmicsFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasOmicsFile> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#OmicsAssay> .
+<http://omicso#hasOmicsFile> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#OmicsFile> .
+<http://omicso#hasOmicsFile> <http://www.w3.org/2000/01/rdf-schema#label> "has omics file" .
+# 
+# http://omicso#hasPlantStructure
+<http://omicso#hasPlantStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasPlantStructure> <http://www.w3.org/2002/07/owl#inverseOf> <http://omicso#isPlanStructureOf> .
+<http://omicso#hasPlantStructure> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#ExperimentalConditions> .
+<http://omicso#hasPlantStructure> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.obolibrary.org/obo/PO_0009011> .
+<http://omicso#hasPlantStructure> <http://www.w3.org/2000/01/rdf-schema#label> "has plant structure" .
+# 
+# http://omicso#hasProteinID
+<http://omicso#hasProteinID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasProteinID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#MoleculeID> .
+<http://omicso#hasProteinID> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165061> .
+<http://omicso#hasProteinID> <http://www.w3.org/2000/01/rdf-schema#label> "has protein id" .
+# 
+# http://omicso#hasProteomicsTech
+<http://omicso#hasProteomicsTech> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasProteomicsTech> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#Proteomics> .
+<http://omicso#hasProteomicsTech> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#ProteomicsTechnology> .
+<http://omicso#hasProteomicsTech> <http://www.w3.org/2000/01/rdf-schema#label> "has proteomics tech" .
+# 
+# http://omicso#hasPubMedId
+<http://omicso#hasPubMedId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasPubMedId> <http://www.w3.org/2002/07/owl#inverseOf> <http://omicso#isPubMedIdOf> .
+<http://omicso#hasPubMedId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#omicsPaper> .
+<http://omicso#hasPubMedId> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.obolibrary.org/obo/OBI_0001617> .
+<http://omicso#hasPubMedId> <http://www.w3.org/2000/01/rdf-schema#label> "has pub med id" .
+# 
+# http://omicso#hasTaxonId
+<http://omicso#hasTaxonId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasTaxonId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C14250> .
+<http://omicso#hasTaxonId> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C179773> .
+<http://omicso#hasTaxonId> <http://www.w3.org/2000/01/rdf-schema#label> "has taxon id" .
+# 
+# http://omicso#hasTranscriptomicsTech
+<http://omicso#hasTranscriptomicsTech> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#hasTranscriptomicsTech> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#Transcriptomics> .
+<http://omicso#hasTranscriptomicsTech> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#TranscriptomicsTechnology> .
+<http://omicso#hasTranscriptomicsTech> <http://www.w3.org/2000/01/rdf-schema#label> "has transcriptomics tech" .
+# 
+# http://omicso#isAnalyteProteinOf
+<http://omicso#isAnalyteProteinOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#isAnalyteProteinOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17021> .
+<http://omicso#isAnalyteProteinOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#Proteomics> .
+<http://omicso#isAnalyteProteinOf> <http://www.w3.org/2000/01/rdf-schema#label> "is analyte protein of" .
+# 
+# http://omicso#isAnalyteTranscriptOf
+<http://omicso#isAnalyteTranscriptOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#isAnalyteTranscriptOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#unionOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C813> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26549> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#isAnalyteTranscriptOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#Transcriptomics> .
+<http://omicso#isAnalyteTranscriptOf> <http://www.w3.org/2000/01/rdf-schema#label> "is analyte transcript of" .
+# 
+# http://omicso#isBaselineExpressionLevelOf
+<http://omicso#isBaselineExpressionLevelOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#isBaselineExpressionLevelOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/ns#BaselineExpressionLevel> .
+<http://omicso#isBaselineExpressionLevelOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#BaselineExpressionStudy> .
+<http://omicso#isBaselineExpressionLevelOf> <http://www.w3.org/2000/01/rdf-schema#label> "is baseline expression level of" .
+# 
+# http://omicso#isDoiOf
+<http://omicso#isDoiOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#isDoiOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C71462> .
+<http://omicso#isDoiOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#omicsPaper> .
+<http://omicso#isDoiOf> <http://www.w3.org/2000/01/rdf-schema#label> "is doi of" .
+# 
+# http://omicso#isExperimentalConditionsOf
+<http://omicso#isExperimentalConditionsOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#isExperimentalConditionsOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#ExperimentalConditions> .
+<http://omicso#isExperimentalConditionsOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#OmicsAssay> .
+<http://omicso#isExperimentalConditionsOf> <http://www.w3.org/2000/01/rdf-schema#label> "is experimental conditions of" .
+# 
+# http://omicso#isExpressionChangeOf
+<http://omicso#isExpressionChangeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#isExpressionChangeOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#DifferentialExpressionChange> .
+<http://omicso#isExpressionChangeOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#DifferentialExpressionStudy> .
+<http://omicso#isExpressionChangeOf> <http://www.w3.org/2000/01/rdf-schema#label> "is expression change of" .
+# 
+# http://omicso#isExpressionOf
+<http://omicso#isExpressionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#isExpressionOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#unionOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.owl-ontologies.com/ns#BaselineExpressionLevel> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://omicso#DifferentialExpressionChange> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#isExpressionOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> .
+<http://omicso#isExpressionOf> <http://www.w3.org/2000/01/rdf-schema#label> "is expression of" .
+# 
+# http://omicso#isExpressionResultOf
+<http://omicso#isExpressionResultOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#isExpressionResultOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#unionOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.owl-ontologies.com/ns#BaselineExpressionLevel> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://omicso#DifferentialExpressionChange> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#isExpressionResultOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#ExpressionStudy> .
+<http://omicso#isExpressionResultOf> <http://www.w3.org/2000/01/rdf-schema#label> "is expression result of" .
+# 
+# http://omicso#isGeneNameOf
+<http://omicso#isGeneNameOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#isGeneNameOf> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://omicso#isGeneSymbolOf> .
+<http://omicso#isGeneNameOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#GeneName> .
+<http://omicso#isGeneNameOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612> .
+<http://omicso#isGeneNameOf> <http://www.w3.org/2000/01/rdf-schema#label> "is gene name of" .
+# 
+# http://omicso#isGeneProductStudiedIn
+<http://omicso#isGeneProductStudiedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#isGeneProductStudiedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> .
+<http://omicso#isGeneProductStudiedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#omicsPaper> .
+<http://omicso#isGeneProductStudiedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is gene product studied in" .
+# 
+# http://omicso#isGeneSymbolOf
+<http://omicso#isGeneSymbolOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#isGeneSymbolOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43568> .
+<http://omicso#isGeneSymbolOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612> .
+<http://omicso#isGeneSymbolOf> <http://www.w3.org/2000/01/rdf-schema#label> "is gene symbol of" .
+# 
+# http://omicso#isPlanStructureOf
+<http://omicso#isPlanStructureOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#isPlanStructureOf> <http://www.w3.org/2000/01/rdf-schema#label> "is plan structure of" .
+# 
+# http://omicso#isPlantStructureOf
+<http://omicso#isPlantStructureOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#isPlantStructureOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.obolibrary.org/obo/PO_0009011> .
+<http://omicso#isPlantStructureOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#ExperimentalConditions> .
+<http://omicso#isPlantStructureOf> <http://www.w3.org/2000/01/rdf-schema#label> "is plant structure of" .
+# 
+# http://omicso#isProteomicsTechOf
+<http://omicso#isProteomicsTechOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#isProteomicsTechOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#ProteomicsTechnology> .
+<http://omicso#isProteomicsTechOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#Proteomics> .
+<http://omicso#isProteomicsTechOf> <http://www.w3.org/2000/01/rdf-schema#label> "is proteomics tech of" .
+# 
+# http://omicso#isPubMedIdOf
+<http://omicso#isPubMedIdOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#isPubMedIdOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.obolibrary.org/obo/OBI_0001617> .
+<http://omicso#isPubMedIdOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#omicsPaper> .
+<http://omicso#isPubMedIdOf> <http://www.w3.org/2000/01/rdf-schema#label> "is pub med id of" .
+# 
+# http://omicso#isTargetedBy
+<http://omicso#isTargetedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#isTargetedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://omicso#targets> .
+<http://omicso#isTargetedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612> .
+<http://omicso#isTargetedBy> <http://www.w3.org/2000/01/rdf-schema#range> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#unionOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ebi.ac.uk/efo/EFO_0000506> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://omicso#overExpression> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#isTargetedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is targeted by" .
+# 
+# http://omicso#isTranscriptomicsTechOf
+<http://omicso#isTranscriptomicsTechOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#isTranscriptomicsTechOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#TranscriptomicsTechnology> .
+<http://omicso#isTranscriptomicsTechOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#Transcriptomics> .
+<http://omicso#isTranscriptomicsTechOf> <http://www.w3.org/2000/01/rdf-schema#label> "is transcriptomics tech of" .
+# 
+# http://omicso#isVariableOf
+<http://omicso#isVariableOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#isVariableOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#unionOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ebi.ac.uk/efo/EFO_0000510> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.obolibrary.org/obo/PSO_0000001> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#isVariableOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#ExperimentalConditions> .
+<http://omicso#isVariableOf> <http://www.w3.org/2000/01/rdf-schema#label> "is variable of" .
+# 
+# http://omicso#omicso
+<http://omicso#omicso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#omicso> <http://www.w3.org/2002/07/owl#inverseOf> <http://omicso#studiesGeneProduct> .
+<http://omicso#omicso> <http://www.w3.org/2000/01/rdf-schema#label> "omicso" .
+# 
+# http://omicso#studiesCell
+<http://omicso#studiesCell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#studiesCell> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#ExperimentalConditions> .
+<http://omicso#studiesCell> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#CellType> .
+<http://omicso#studiesCell> <http://www.w3.org/2000/01/rdf-schema#label> "studies cell" .
+# 
+# http://omicso#studiesGeneProduct
+<http://omicso#studiesGeneProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#studiesGeneProduct> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#omicsPaper> .
+<http://omicso#studiesGeneProduct> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> .
+<http://omicso#studiesGeneProduct> <http://www.w3.org/2000/01/rdf-schema#label> "studies gene product" .
+# 
+# http://omicso#targets
+<http://omicso#targets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#targets> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#unionOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ebi.ac.uk/efo/EFO_0000506> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://omicso#overExpression> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#targets> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612> .
+<http://omicso#targets> <http://www.w3.org/2000/01/rdf-schema#label> "targets" .
+# 
+# http://omicso#'hasProduct'
+<http://omicso#'hasProduct'> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://omicso#'hasProduct'> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> .
+<http://omicso#'hasProduct'> <http://www.w3.org/2000/01/rdf-schema#range> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#unionOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C813> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26549> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17021> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#'hasProduct'> <http://www.w3.org/2000/01/rdf-schema#label> "has product" .
+# 
+# http://purl.obolibrary.org/obo/RO_0000056
+<http://purl.obolibrary.org/obo/RO_0000056> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.obolibrary.org/obo/RO_0000056> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.obolibrary.org/obo/RO_0000057> .
+<http://purl.obolibrary.org/obo/RO_0000056> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> .
+<http://purl.obolibrary.org/obo/RO_0000056> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.obolibrary.org/obo/GO_0008150> .
+<http://purl.obolibrary.org/obo/RO_0000056> <http://www.w3.org/2000/01/rdf-schema#label> "participates in" .
+# 
+# http://purl.obolibrary.org/obo/RO_0000057
+<http://purl.obolibrary.org/obo/RO_0000057> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.obolibrary.org/obo/RO_0000057> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.obolibrary.org/obo/GO_0008150> .
+<http://purl.obolibrary.org/obo/RO_0000057> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> .
+<http://purl.obolibrary.org/obo/RO_0000057> <http://www.w3.org/2000/01/rdf-schema#label> "has participant" .
+# 
+# http://purl.obolibrary.org/obo/RO_0000079
+<http://purl.obolibrary.org/obo/RO_0000079> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.obolibrary.org/obo/RO_0000079> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.obolibrary.org/obo/RO_0000085> .
+<http://purl.obolibrary.org/obo/RO_0000079> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.obolibrary.org/obo/GO_0003674> .
+<http://purl.obolibrary.org/obo/RO_0000079> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> .
+<http://purl.obolibrary.org/obo/RO_0000079> <http://www.w3.org/2000/01/rdf-schema#label> "function of" .
+# 
+# http://purl.obolibrary.org/obo/RO_0000085
+<http://purl.obolibrary.org/obo/RO_0000085> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.obolibrary.org/obo/RO_0000085> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> .
+<http://purl.obolibrary.org/obo/RO_0000085> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.obolibrary.org/obo/GO_0003674> .
+<http://purl.obolibrary.org/obo/RO_0000085> <http://www.w3.org/2000/01/rdf-schema#label> "has function" .
+# 
+# http://purl.obolibrary.org/obo/RO_0001015
+<http://purl.obolibrary.org/obo/RO_0001015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.obolibrary.org/obo/RO_0001015> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.obolibrary.org/obo/RO_0001025> .
+<http://purl.obolibrary.org/obo/RO_0001015> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.obolibrary.org/obo/GO_0005575> .
+<http://purl.obolibrary.org/obo/RO_0001015> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> .
+<http://purl.obolibrary.org/obo/RO_0001015> <http://www.w3.org/2000/01/rdf-schema#label> "location of" .
+# 
+# http://purl.obolibrary.org/obo/RO_0001025
+<http://purl.obolibrary.org/obo/RO_0001025> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.obolibrary.org/obo/RO_0001025> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> .
+<http://purl.obolibrary.org/obo/RO_0001025> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.obolibrary.org/obo/GO_0005575> .
+<http://purl.obolibrary.org/obo/RO_0001025> <http://www.w3.org/2000/01/rdf-schema#label> "located in" .
+# 
+# http://semanticscience.org/resource/SIO_000205
+<http://semanticscience.org/resource/SIO_000205> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://semanticscience.org/resource/SIO_000205> <http://www.w3.org/2002/07/owl#inverseOf> <http://semanticscience.org/resource/SIO_000210> .
+<http://semanticscience.org/resource/SIO_000205> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> .
+<http://semanticscience.org/resource/SIO_000205> <http://www.w3.org/2000/01/rdf-schema#range> <http://omicso#MoleculeID> .
+<http://semanticscience.org/resource/SIO_000205> <http://www.w3.org/2000/01/rdf-schema#label> "is represented by" .
+# 
+# http://semanticscience.org/resource/SIO_000210
+<http://semanticscience.org/resource/SIO_000210> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://semanticscience.org/resource/SIO_000210> <http://www.w3.org/2000/01/rdf-schema#domain> <http://omicso#MoleculeID> .
+<http://semanticscience.org/resource/SIO_000210> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> .
+<http://semanticscience.org/resource/SIO_000210> <http://www.w3.org/2000/01/rdf-schema#label> "represents" .
+# 
+# http://semanticscience.org/resource/SIO_010078
+<http://semanticscience.org/resource/SIO_010078> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://semanticscience.org/resource/SIO_010078> <http://www.w3.org/2002/07/owl#inverseOf> <http://semanticscience.org/resource/SIO_010079> .
+<http://semanticscience.org/resource/SIO_010078> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612> .
+<http://semanticscience.org/resource/SIO_010078> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> .
+<http://semanticscience.org/resource/SIO_010078> <http://www.w3.org/2000/01/rdf-schema#label> "encodes" .
+# 
+# http://semanticscience.org/resource/SIO_010079
+<http://semanticscience.org/resource/SIO_010079> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://semanticscience.org/resource/SIO_010079> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> .
+<http://semanticscience.org/resource/SIO_010079> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612> .
+<http://semanticscience.org/resource/SIO_010079> <http://www.w3.org/2000/01/rdf-schema#label> "is encoded by" .
+# 
+# http://semanticscience.org/resource/SIO_010082
+<http://semanticscience.org/resource/SIO_010082> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://semanticscience.org/resource/SIO_010082> <http://www.w3.org/2002/07/owl#inverseOf> <http://semanticscience.org/resource/SIO_010083> .
+<http://semanticscience.org/resource/SIO_010082> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C813> .
+<http://semanticscience.org/resource/SIO_010082> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17021> .
+<http://semanticscience.org/resource/SIO_010082> <http://www.w3.org/2000/01/rdf-schema#label> "is translated into" .
+# 
+# http://semanticscience.org/resource/SIO_010083
+<http://semanticscience.org/resource/SIO_010083> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://semanticscience.org/resource/SIO_010083> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17021> .
+<http://semanticscience.org/resource/SIO_010083> <http://www.w3.org/2000/01/rdf-schema#range> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C813> .
+<http://semanticscience.org/resource/SIO_010083> <http://www.w3.org/2000/01/rdf-schema#label> "is translated from" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://omicso#bioinformaticTool
+<http://omicso#bioinformaticTool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://omicso#bioinformaticTool> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://omicso#bioinformaticTool> <http://www.w3.org/2000/01/rdf-schema#label> "bioinformatic tool" .
+# 
+# http://omicso#cellName
+<http://omicso#cellName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://omicso#cellName> <http://www.w3.org/2000/01/rdf-schema#label> "cell name" .
+# 
+# http://omicso#experimentalMetadata
+<http://omicso#experimentalMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://omicso#experimentalMetadata> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://omicso#experimentalMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "experimental metadata" .
+# 
+# http://omicso#expressionUnits
+<http://omicso#expressionUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://omicso#expressionUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://omicso#expressionUnits> <http://www.w3.org/2000/01/rdf-schema#label> "expression units" .
+# 
+# http://omicso#filename
+<http://omicso#filename> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://omicso#filename> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://omicso#filename> <http://www.w3.org/2000/01/rdf-schema#label> "filename" .
+# 
+# http://omicso#geneSeq
+<http://omicso#geneSeq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://omicso#geneSeq> <http://www.w3.org/2000/01/rdf-schema#label> "gene seq" .
+# 
+# http://omicso#geneSeqLength
+<http://omicso#geneSeqLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://omicso#geneSeqLength> <http://www.w3.org/2000/01/rdf-schema#label> "gene seq length" .
+# 
+# http://omicso#hasFormat
+<http://omicso#hasFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://omicso#hasFormat> <http://www.w3.org/2000/01/rdf-schema#label> "has format" .
+# 
+# http://omicso#hasName
+<http://omicso#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://omicso#hasName> <http://www.w3.org/2000/01/rdf-schema#label> "has name" .
+# 
+# http://omicso#hasPvalue
+<http://omicso#hasPvalue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://omicso#hasPvalue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://omicso#hasPvalue> <http://www.w3.org/2000/01/rdf-schema#label> "has pvalue" .
+# 
+# http://omicso#log2FoldChange
+<http://omicso#log2FoldChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://omicso#log2FoldChange> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://omicso#log2FoldChange> <http://www.w3.org/2000/01/rdf-schema#label> "log2 fold change" .
+# 
+# http://omicso#proteinSequence
+<http://omicso#proteinSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://omicso#proteinSequence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://omicso#proteinSequence> <http://www.w3.org/2000/01/rdf-schema#label> "protein sequence" .
+# 
+# http://omicso#structureName
+<http://omicso#structureName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://omicso#structureName> <http://www.w3.org/2000/01/rdf-schema#label> "structure name" .
+# 
+# http://purl.obolibrary.org/obo/OBI_0001937
+<http://purl.obolibrary.org/obo/OBI_0001937> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.obolibrary.org/obo/OBI_0001937> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://purl.obolibrary.org/obo/OBI_0001937> <http://www.w3.org/2000/01/rdf-schema#label> "o b i_0001937" .
+# 
+# http://purl.org/dc/elements/1.1/abstract
+<http://purl.org/dc/elements/1.1/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/elements/1.1/abstract> <http://www.w3.org/2000/01/rdf-schema#label> "abstract" .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/2000/01/rdf-schema#label> "date" .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C14250
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C14250> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C14250> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasTaxonId> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C14250> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasName> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C14250> <http://www.w3.org/2000/01/rdf-schema#label> "Organism" .
+# 
+# http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165061
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165061> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165061> <http://www.w3.org/2002/07/owl#disjointWith> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43568> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165061> <http://www.w3.org/2000/01/rdf-schema#label> "Protein symbol" .
+# 
+# http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasGeneName> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasGeneSymbol> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#isTargetedBy> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#geneSeq> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#geneSeqLength> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612> <http://www.w3.org/2000/01/rdf-schema#label> "Gene" .
+# 
+# http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17021
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17021> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
+_:genid42 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#isAnalyteProteinOf> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17021> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
+_:genid43 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#proteinSequence> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17021> <http://www.w3.org/2000/01/rdf-schema#label> "Protein" .
+# 
+# http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C179773
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C179773> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C179773> <http://www.w3.org/2000/01/rdf-schema#label> "NCBI Taxonomy Identifier" .
+# 
+# http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
+_:genid44 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasExpression> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#isGeneProductStudiedIn> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#'hasProduct'> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
+_:genid47 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticscience.org/resource/SIO_000205> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26548> <http://www.w3.org/2000/01/rdf-schema#label> "Gene Product" .
+# 
+# http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26549
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26549> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26549> <http://www.w3.org/2000/01/rdf-schema#label> "Untranslated RNA" .
+# 
+# http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43568
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43568> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43568> <http://www.w3.org/2002/07/owl#equivalentClass> <http://omicso#GeneName> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43568> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
+_:genid48 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#isGeneSymbolOf> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43568> <http://www.w3.org/2000/01/rdf-schema#label> "Gene Symbol" .
+# 
+# http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C71462
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C71462> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C71462> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
+_:genid49 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#isDoiOf> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C71462> <http://www.w3.org/2000/01/rdf-schema#label> "Digital Object Identifier" .
+# 
+# http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C813
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C813> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C813> <http://www.w3.org/2000/01/rdf-schema#label> "Messenger RNA" .
+# 
+# http://omicso#BaselineExpressionStudy
+<http://omicso#BaselineExpressionStudy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#BaselineExpressionStudy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#ExpressionStudy> .
+<http://omicso#BaselineExpressionStudy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
+_:genid50 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasBaselineExpressionLevel> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#BaselineExpressionStudy> <http://www.w3.org/2000/01/rdf-schema#comment> "Study of the basal expression of an specific molecular entity" .
+<http://omicso#BaselineExpressionStudy> <http://www.w3.org/2000/01/rdf-schema#label> "Baseline Expression Study" .
+# 
+# http://omicso#CAGE
+<http://omicso#CAGE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#CAGE> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#TranscriptomicsTechnology> .
+<http://omicso#CAGE> <http://www.w3.org/2000/01/rdf-schema#comment> "Cap analysis of gene expression" .
+<http://omicso#CAGE> <http://www.w3.org/2000/01/rdf-schema#label> "CAGE" .
+# 
+# http://omicso#CellType
+<http://omicso#CellType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#CellType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
+_:genid51 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#cellName> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#CellType> <http://www.w3.org/2000/01/rdf-schema#label> "Cell Type" .
+# 
+# http://omicso#DifferentialExpressionChange
+<http://omicso#DifferentialExpressionChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#DifferentialExpressionChange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
+_:genid52 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#isExpressionChangeOf> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#DifferentialExpressionChange> <http://www.w3.org/2000/01/rdf-schema#label> "Differential Expression Change" .
+# 
+# http://omicso#DifferentialExpressionStudy
+<http://omicso#DifferentialExpressionStudy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#DifferentialExpressionStudy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#ExpressionStudy> .
+<http://omicso#DifferentialExpressionStudy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
+_:genid53 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasExpressionChange> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#DifferentialExpressionStudy> <http://www.w3.org/2000/01/rdf-schema#comment> "Study of the expression of an specific molecular entity when compared to an standardized control" .
+<http://omicso#DifferentialExpressionStudy> <http://www.w3.org/2000/01/rdf-schema#label> "Differential Expression Study" .
+# 
+# http://omicso#DownRegulation
+<http://omicso#DownRegulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#DownRegulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#DifferentialExpressionChange> .
+<http://omicso#DownRegulation> <http://www.w3.org/2000/01/rdf-schema#label> "Down Regulation" .
+# 
+# http://omicso#ExperimentalConditions
+<http://omicso#ExperimentalConditions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#ExperimentalConditions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
+_:genid54 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid55 .
+_:genid55 <http://www.w3.org/2002/07/owl#unionOf> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ebi.ac.uk/efo/EFO_0000510> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.obolibrary.org/obo/PSO_0000001> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasExperimentalVariable> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#ExperimentalConditions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
+_:genid58 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasExperimentalVariable> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#ExperimentalConditions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
+_:genid59 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasPlantStructure> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#ExperimentalConditions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
+_:genid60 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#isExperimentalConditionsOf> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#ExperimentalConditions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid61 .
+_:genid61 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#studiesCell> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#ExperimentalConditions> <http://www.w3.org/2000/01/rdf-schema#comment> "A variable or set of variables that describe the environmental or procedural factors under which an experiment is conducted." .
+<http://omicso#ExperimentalConditions> <http://www.w3.org/2000/01/rdf-schema#label> "Experimental Conditions" .
+# 
+# http://omicso#ExpressionStudy
+<http://omicso#ExpressionStudy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#ExpressionStudy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid62 .
+_:genid62 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid62 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasExpressionResult> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#ExpressionStudy> <http://www.w3.org/2000/01/rdf-schema#comment> "Investigations that focus on the analysis of gene or protein expression patterns in a biological system." .
+<http://omicso#ExpressionStudy> <http://www.w3.org/2000/01/rdf-schema#label> "Expression Study" .
+# 
+# http://omicso#FileID
+<http://omicso#FileID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#FileID> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identificator of the file containing the OMICs data for the assay results" .
+<http://omicso#FileID> <http://www.w3.org/2000/01/rdf-schema#label> "File ID" .
+# 
+# http://omicso#GeneName
+<http://omicso#GeneName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#GeneName> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid63 .
+_:genid63 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid63 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#isGeneNameOf> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#GeneName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name (consensus) of a gene" .
+<http://omicso#GeneName> <http://www.w3.org/2000/01/rdf-schema#label> "Gene Name" .
+# 
+# http://omicso#ICAT
+<http://omicso#ICAT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#ICAT> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#ProteomicsTechnology> .
+<http://omicso#ICAT> <http://www.w3.org/2000/01/rdf-schema#comment> "Isotope-coded affinity tag" .
+<http://omicso#ICAT> <http://www.w3.org/2000/01/rdf-schema#label> "ICAT" .
+# 
+# http://omicso#MoleculeID
+<http://omicso#MoleculeID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#MoleculeID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid64 .
+_:genid64 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid64 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasGeneID> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#MoleculeID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid65 .
+_:genid65 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid65 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasProteinID> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#MoleculeID> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid66 .
+_:genid66 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid66 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticscience.org/resource/SIO_000210> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#MoleculeID> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier of a molecule entity" .
+<http://omicso#MoleculeID> <http://www.w3.org/2000/01/rdf-schema#label> "Molecule ID" .
+# 
+# http://omicso#NanoporeSequencing
+<http://omicso#NanoporeSequencing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#NanoporeSequencing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#TranscriptomicsTechnology> .
+<http://omicso#NanoporeSequencing> <http://www.w3.org/2000/01/rdf-schema#comment> "Nanopore Sequencing Technology" .
+<http://omicso#NanoporeSequencing> <http://www.w3.org/2000/01/rdf-schema#label> "Nanopore Sequencing" .
+# 
+# http://omicso#NoChange
+<http://omicso#NoChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#NoChange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#DifferentialExpressionChange> .
+<http://omicso#NoChange> <http://www.w3.org/2000/01/rdf-schema#label> "No Change" .
+# 
+# http://omicso#OmicsAssay
+<http://omicso#OmicsAssay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#OmicsAssay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid67 .
+_:genid67 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://omicso#ExpressionStudy> .
+_:genid67 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasExpressionStudy> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#OmicsAssay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid68 .
+_:genid68 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid68 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasExperimentalConditions> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#OmicsAssay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid69 .
+_:genid69 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid69 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasOmicsFile> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#OmicsAssay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid70 .
+_:genid70 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid70 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasExpressionStudy> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#OmicsAssay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid71 .
+_:genid71 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid71 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#bioinformaticTool> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#OmicsAssay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid72 .
+_:genid72 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid72 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#experimentalMetadata> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#OmicsAssay> <http://www.w3.org/2000/01/rdf-schema#comment> "Data -omics experimental assay" .
+<http://omicso#OmicsAssay> <http://www.w3.org/2000/01/rdf-schema#label> "Omics Assay" .
+# 
+# http://omicso#OmicsFile
+<http://omicso#OmicsFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#OmicsFile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid73 .
+_:genid73 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid73 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasFileID> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#OmicsFile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid74 .
+_:genid74 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid74 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#filename> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#OmicsFile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid75 .
+_:genid75 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid75 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasFormat> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#OmicsFile> <http://www.w3.org/2000/01/rdf-schema#comment> "File containing the omis data results of an specific Omics Assay" .
+<http://omicso#OmicsFile> <http://www.w3.org/2000/01/rdf-schema#label> "Omics File" .
+# 
+# http://omicso#PLA
+<http://omicso#PLA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#PLA> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#ProteomicsTechnology> .
+<http://omicso#PLA> <http://www.w3.org/2000/01/rdf-schema#comment> "Proximity ligation assay" .
+<http://omicso#PLA> <http://www.w3.org/2000/01/rdf-schema#label> "PLA" .
+# 
+# http://omicso#ProteinMicroarray
+<http://omicso#ProteinMicroarray> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#ProteinMicroarray> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#ProteomicsTechnology> .
+<http://omicso#ProteinMicroarray> <http://www.w3.org/2000/01/rdf-schema#comment> "Protein Microarray assay" .
+<http://omicso#ProteinMicroarray> <http://www.w3.org/2000/01/rdf-schema#label> "Protein Microarray" .
+# 
+# http://omicso#Proteomics
+<http://omicso#Proteomics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#Proteomics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#OmicsAssay> .
+<http://omicso#Proteomics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid76 .
+_:genid76 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid76 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasAnalyteProtein> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#Proteomics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid77 .
+_:genid77 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid77 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasProteomicsTech> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#Proteomics> <http://www.w3.org/2000/01/rdf-schema#comment> "The comprehensive study of proteins in a biological system." .
+<http://omicso#Proteomics> <http://www.w3.org/2000/01/rdf-schema#label> "Proteomics" .
+# 
+# http://omicso#ProteomicsTechnology
+<http://omicso#ProteomicsTechnology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#ProteomicsTechnology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid78 .
+_:genid78 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid78 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#isProteomicsTechOf> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#ProteomicsTechnology> <http://www.w3.org/2002/07/owl#disjointWith> <http://omicso#TranscriptomicsTechnology> .
+<http://omicso#ProteomicsTechnology> <http://www.w3.org/2000/01/rdf-schema#comment> "The diverse set of techniques and methods used in the field of proteomics for the study of proteins." .
+<http://omicso#ProteomicsTechnology> <http://www.w3.org/2000/01/rdf-schema#label> "Proteomics Technology" .
+# 
+# http://omicso#RNAMicroarray
+<http://omicso#RNAMicroarray> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#RNAMicroarray> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#TranscriptomicsTechnology> .
+<http://omicso#RNAMicroarray> <http://www.w3.org/2000/01/rdf-schema#comment> "RNA Microarray technology" .
+<http://omicso#RNAMicroarray> <http://www.w3.org/2000/01/rdf-schema#label> "RNA Microarray" .
+# 
+# http://omicso#RTqPCR
+<http://omicso#RTqPCR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#RTqPCR> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#TranscriptomicsTechnology> .
+<http://omicso#RTqPCR> <http://www.w3.org/2000/01/rdf-schema#comment> "Reverse Transcription Quantitative Polimerase Chain Reaction" .
+<http://omicso#RTqPCR> <http://www.w3.org/2000/01/rdf-schema#label> "RT-qPCR" .
+# 
+# http://omicso#RiboSeq
+<http://omicso#RiboSeq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#RiboSeq> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#TranscriptomicsTechnology> .
+<http://omicso#RiboSeq> <http://www.w3.org/2000/01/rdf-schema#comment> "Ribosome Sequencing" .
+<http://omicso#RiboSeq> <http://www.w3.org/2000/01/rdf-schema#label> "Ribo Seq" .
+# 
+# http://omicso#SILAC
+<http://omicso#SILAC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#SILAC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#ProteomicsTechnology> .
+<http://omicso#SILAC> <http://www.w3.org/2000/01/rdf-schema#comment> "Stable isotope labelling by aminoacids in cell culture" .
+<http://omicso#SILAC> <http://www.w3.org/2000/01/rdf-schema#label> "SILAC" .
+# 
+# http://omicso#SRM
+<http://omicso#SRM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#SRM> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#ProteomicsTechnology> .
+<http://omicso#SRM> <http://www.w3.org/2000/01/rdf-schema#comment> "Selected Reaction Monitoring" .
+<http://omicso#SRM> <http://www.w3.org/2000/01/rdf-schema#label> "SRM" .
+# 
+# http://omicso#ShotgunProteomics
+<http://omicso#ShotgunProteomics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#ShotgunProteomics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#ProteomicsTechnology> .
+<http://omicso#ShotgunProteomics> <http://www.w3.org/2000/01/rdf-schema#comment> "Shotgun proteomics assay" .
+<http://omicso#ShotgunProteomics> <http://www.w3.org/2000/01/rdf-schema#label> "Shotgun Proteomics" .
+# 
+# http://omicso#Transcriptomics
+<http://omicso#Transcriptomics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#Transcriptomics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#OmicsAssay> .
+<http://omicso#Transcriptomics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid79 .
+_:genid79 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid79 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasAnalyteTranscript> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#Transcriptomics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid80 .
+_:genid80 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid80 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasTranscriptomicsTech> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#Transcriptomics> <http://www.w3.org/2000/01/rdf-schema#comment> "The comprehensive study of transcripts (mRNA or untranslated RNA) in a biological system." .
+<http://omicso#Transcriptomics> <http://www.w3.org/2000/01/rdf-schema#label> "Transcriptomics" .
+# 
+# http://omicso#TranscriptomicsTechnology
+<http://omicso#TranscriptomicsTechnology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#TranscriptomicsTechnology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid81 .
+_:genid81 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid81 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#isTranscriptomicsTechOf> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#TranscriptomicsTechnology> <http://www.w3.org/2000/01/rdf-schema#comment> "The diverse set of techniques and methods used in the field of transcriptomics for the study of RNA molecules." .
+<http://omicso#TranscriptomicsTechnology> <http://www.w3.org/2000/01/rdf-schema#label> "Transcriptomics Technology" .
+# 
+# http://omicso#UpRegulation
+<http://omicso#UpRegulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#UpRegulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#DifferentialExpressionChange> .
+<http://omicso#UpRegulation> <http://www.w3.org/2000/01/rdf-schema#label> "Up Regulation" .
+# 
+# http://omicso#WesternBlot
+<http://omicso#WesternBlot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#WesternBlot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#ProteomicsTechnology> .
+<http://omicso#WesternBlot> <http://www.w3.org/2000/01/rdf-schema#comment> "Western Blot assay" .
+<http://omicso#WesternBlot> <http://www.w3.org/2000/01/rdf-schema#label> "Western Blot" .
+# 
+# http://omicso#omicsPaper
+<http://omicso#omicsPaper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#omicsPaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid82 .
+_:genid82 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://omicso#OmicsAssay> .
+_:genid82 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasAssay> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#omicsPaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid83 .
+_:genid83 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid83 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasAssay> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#omicsPaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid84 .
+_:genid84 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid84 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#studiesGeneProduct> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#omicsPaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid85 .
+_:genid85 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid85 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasDoi> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#omicsPaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid86 .
+_:genid86 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid86 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#hasPubMedId> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#omicsPaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid87 .
+_:genid87 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid87 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/elements/1.1/creator> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#omicsPaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid88 .
+_:genid88 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid88 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/elements/1.1/abstract> .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#omicsPaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid89 .
+_:genid89 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid89 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/elements/1.1/date> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#omicsPaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid90 .
+_:genid90 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid90 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/elements/1.1/title> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://omicso#omicsPaper> <http://www.w3.org/2000/01/rdf-schema#comment> "Published scientific paper where one or more omics assays are conducted" .
+<http://omicso#omicsPaper> <http://www.w3.org/2000/01/rdf-schema#label> "Omics Paper" .
+# 
+# http://omicso#overExpression
+<http://omicso#overExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#overExpression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ebi.ac.uk/efo/EFO_0000510> .
+<http://omicso#overExpression> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.ebi.ac.uk/efo/EFO_0000506> .
+<http://omicso#overExpression> <http://www.w3.org/2000/01/rdf-schema#comment> "A condition in which a gene or set of genes is expressed at a level significantly higher than normal, often leading to an increased production of the corresponding gene product." .
+<http://omicso#overExpression> <http://www.w3.org/2000/01/rdf-schema#label> "Over-expression" .
+# 
+# http://omicso#qPCR
+<http://omicso#qPCR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#qPCR> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#TranscriptomicsTechnology> .
+<http://omicso#qPCR> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative Polimerase Chain Reaction" .
+<http://omicso#qPCR> <http://www.w3.org/2000/01/rdf-schema#label> "qPCR" .
+# 
+# http://omicso#scRNASeq
+<http://omicso#scRNASeq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://omicso#scRNASeq> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#TranscriptomicsTechnology> .
+<http://omicso#scRNASeq> <http://www.w3.org/2000/01/rdf-schema#comment> "Single cell RNA sequencing" .
+<http://omicso#scRNASeq> <http://www.w3.org/2000/01/rdf-schema#label> "scRNA-Seq" .
+# 
+# http://purl.obolibrary.org/obo/GO_0003674
+<http://purl.obolibrary.org/obo/GO_0003674> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/GO_0003674> <http://www.w3.org/2000/01/rdf-schema#comment> "Function of an specific molecular entity" .
+<http://purl.obolibrary.org/obo/GO_0003674> <http://www.w3.org/2000/01/rdf-schema#label> "Molecular Function" .
+# 
+# http://purl.obolibrary.org/obo/GO_0005575
+<http://purl.obolibrary.org/obo/GO_0005575> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/GO_0005575> <http://www.w3.org/2000/01/rdf-schema#comment> "Component or part of the cell" .
+<http://purl.obolibrary.org/obo/GO_0005575> <http://www.w3.org/2000/01/rdf-schema#label> "Cellular Component" .
+# 
+# http://purl.obolibrary.org/obo/GO_0008150
+<http://purl.obolibrary.org/obo/GO_0008150> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/GO_0008150> <http://www.w3.org/2000/01/rdf-schema#comment> "Molecular process in which a molecular entity is involved" .
+<http://purl.obolibrary.org/obo/GO_0008150> <http://www.w3.org/2000/01/rdf-schema#label> "Biological Process" .
+# 
+# http://purl.obolibrary.org/obo/OBI0001271
+<http://purl.obolibrary.org/obo/OBI0001271> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/OBI0001271> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#TranscriptomicsTechnology> .
+<http://purl.obolibrary.org/obo/OBI0001271> <http://www.w3.org/2000/01/rdf-schema#comment> "RNA sequencing assay" .
+<http://purl.obolibrary.org/obo/OBI0001271> <http://www.w3.org/2000/01/rdf-schema#label> "RNA-seq assay" .
+# 
+# http://purl.obolibrary.org/obo/OBI0003097
+<http://purl.obolibrary.org/obo/OBI0003097> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/OBI0003097> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://omicso#ProteomicsTechnology> .
+<http://purl.obolibrary.org/obo/OBI0003097> <http://www.w3.org/2000/01/rdf-schema#comment> "Liquid Chromatography Mass Spectophotometry" .
+<http://purl.obolibrary.org/obo/OBI0003097> <http://www.w3.org/2000/01/rdf-schema#label> "LC-MS" .
+# 
+# http://purl.obolibrary.org/obo/OBI_0001617
+<http://purl.obolibrary.org/obo/OBI_0001617> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/OBI_0001617> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid91 .
+_:genid91 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid91 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#isPubMedIdOf> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.obolibrary.org/obo/OBI_0001617> <http://www.w3.org/2000/01/rdf-schema#comment> "PubMed database unique identificator" .
+<http://purl.obolibrary.org/obo/OBI_0001617> <http://www.w3.org/2000/01/rdf-schema#label> "PubMed ID" .
+# 
+# http://purl.obolibrary.org/obo/PO_0009011
+<http://purl.obolibrary.org/obo/PO_0009011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/PO_0009011> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid92 .
+_:genid92 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid92 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#belongsTo> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.obolibrary.org/obo/PO_0009011> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid93 .
+_:genid93 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid93 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#isPlantStructureOf> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.obolibrary.org/obo/PO_0009011> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid94 .
+_:genid94 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid94 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#structureName> .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.obolibrary.org/obo/PO_0009011> <http://www.w3.org/2000/01/rdf-schema#comment> "Distinct parts or components of a plant, including organs, tissues, and anatomical structures" .
+<http://purl.obolibrary.org/obo/PO_0009011> <http://www.w3.org/2000/01/rdf-schema#label> "Plant Structure" .
+# 
+# http://purl.obolibrary.org/obo/PSO_0000001
+<http://purl.obolibrary.org/obo/PSO_0000001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/PSO_0000001> <http://www.w3.org/2000/01/rdf-schema#comment> "Adverse conditions or factors that have a detrimental impact on the well-being and physiological functioning of plants." .
+<http://purl.obolibrary.org/obo/PSO_0000001> <http://www.w3.org/2000/01/rdf-schema#label> "Plant Stress" .
+# 
+# http://purl.obolibrary.org/obo/PSO_0000011
+<http://purl.obolibrary.org/obo/PSO_0000011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/PSO_0000011> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/PSO_0000001> .
+<http://purl.obolibrary.org/obo/PSO_0000011> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.obolibrary.org/obo/PSO_0000012> .
+<http://purl.obolibrary.org/obo/PSO_0000011> <http://www.w3.org/2000/01/rdf-schema#comment> "Plant stress condition caused by a biological agent" .
+<http://purl.obolibrary.org/obo/PSO_0000011> <http://www.w3.org/2000/01/rdf-schema#label> "Biotic Plant Stress" .
+# 
+# http://purl.obolibrary.org/obo/PSO_0000012
+<http://purl.obolibrary.org/obo/PSO_0000012> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.obolibrary.org/obo/PSO_0000012> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/PSO_0000001> .
+<http://purl.obolibrary.org/obo/PSO_0000012> <http://www.w3.org/2000/01/rdf-schema#comment> "Plant stress condition of non-biological nature or caused by a non biologic agent" .
+<http://purl.obolibrary.org/obo/PSO_0000012> <http://www.w3.org/2000/01/rdf-schema#label> "Abiotic Plant Stress" .
+# 
+# http://www.ebi.ac.uk/efo/EFO_0000506
+<http://www.ebi.ac.uk/efo/EFO_0000506> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ebi.ac.uk/efo/EFO_0000506> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ebi.ac.uk/efo/EFO_0000510> .
+<http://www.ebi.ac.uk/efo/EFO_0000506> <http://www.w3.org/2000/01/rdf-schema#comment> "The process or result of inactivating or 'knocking out' a gene within an organism, often performed in biological research to study the function of the gene." .
+<http://www.ebi.ac.uk/efo/EFO_0000506> <http://www.w3.org/2000/01/rdf-schema#label> "Gene knockout" .
+# 
+# http://www.ebi.ac.uk/efo/EFO_0000510
+<http://www.ebi.ac.uk/efo/EFO_0000510> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ebi.ac.uk/efo/EFO_0000510> <http://www.w3.org/2000/01/rdf-schema#comment> "A broad category representing any intentional alteration made to the genetic material of an organism." .
+<http://www.ebi.ac.uk/efo/EFO_0000510> <http://www.w3.org/2000/01/rdf-schema#label> "Genetic Modification" .
+# 
+# http://www.owl-ontologies.com/ns#BaselineExpressionLevel
+<http://www.owl-ontologies.com/ns#BaselineExpressionLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/ns#BaselineExpressionLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid95 .
+_:genid95 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid95 <http://www.w3.org/2002/07/owl#onProperty> <http://omicso#isBaselineExpressionLevelOf> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.owl-ontologies.com/ns#BaselineExpressionLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Baseline or normal levels of gene or protein expression in a reference state or under standard conditions." .
+<http://www.owl-ontologies.com/ns#BaselineExpressionLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Baseline Expression Level" .
+# 
+_:genid96 <http://www.w3.org/2000/01/rdf-schema#comment> "https://creativecommons.org/licenses/by/4.0/" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/2000/01/rdf-schema#label> "creator" .
+# 
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2000/01/rdf-schema#label> "title" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid97 <http://www.w3.org/2002/07/owl#members> _:genid100 .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid99 .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid98 .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C813> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26549> .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17021> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid101 <http://www.w3.org/2002/07/owl#members> _:genid104 .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid103 .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid102 .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://omicso#UpRegulation> .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://omicso#NoChange> .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://omicso#DownRegulation> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid105 <http://www.w3.org/2002/07/owl#members> _:genid108 .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid107 .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid106 .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.obolibrary.org/obo/GO_0008150> .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.obolibrary.org/obo/GO_0005575> .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.obolibrary.org/obo/GO_0003674> .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
