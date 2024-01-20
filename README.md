@@ -1,4 +1,7 @@
-# OmicsO_Omics_data_Ontology_MLM_LMG
+# OMICSO: Omics data Ontology
+Miguel La Iglesia Mirones, Lucía Muñoz Gil
+Semantic Technologies, MSc in Computational Biology
+January 2024
 
 Data omics, encompassing fields such as genomics, proteomics, metabolomics, and transcriptomics, plays a pivotal role in the current understanding of biological systems. These disciplines enable comprehensive and systematic analysis of various molecular components within cells, organisms, or ecosystems. By deciphering the intricate interplay of genes, proteins, metabolites, and other molecules, data omics provide valuable insights into fundamental biological processes, disease mechanisms, and even environmental dynamics.\newline
 
